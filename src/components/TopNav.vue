@@ -5,16 +5,21 @@
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/doc">Doc</router-link></li>
     </ol>
-    <span class="toggleAside"></span>
+    <span :class="{ toggleAside: toggleVisible }" @click="toggleMenu"></span>
   </div>
 </template>
 
 <script lang="ts">
-export default {};
+export default {
+  props: {
+    toggleVisible: Boolean,
+  },
+};
 </script>
 
 <style lang="scss">
 .topnav {
+  z-index: 10;
   background: yellowgreen;
   padding: 16px;
   width: 100%;
@@ -42,12 +47,12 @@ export default {};
     display: none;
     width: 24px;
     height: 24px;
-    background: blue;
+    border: 1px solid red;
     position: absolute;
+    left: 16px;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10;
   }
   @media (max-width: 500px) {
     > .logo {

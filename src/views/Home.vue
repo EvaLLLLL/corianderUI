@@ -1,5 +1,5 @@
 <template>
-  <TopNav />
+  <TopNav :toggleVisible="false"/>
   <div class="banner">
     <img src="" alt="" />
     <h1>香菜UI</h1>
