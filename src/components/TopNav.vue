@@ -5,14 +5,24 @@
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/doc">Doc</router-link></li>
     </ol>
-    <span :class="{ toggleAside: toggleVisible }" @click="toggleMenu"></span>
+    <span :class="{ toggleVisible: toggleVisible }"        
+          @click="toggleAside"></span>
   </div>
 </template>
 
 <script lang="ts">
+import { inject, Ref } from "vue";
 export default {
+  name: "TopNav",
   props: {
     toggleVisible: Boolean,
+  },
+  setup() {
+    const asideVisible = inject<Ref<boolean>>("asideVisible");
+    const toggleAside = () => {
+      asideVisible.value = !asideVisible.value;
+    };
+    return { toggleAside };
   },
 };
 </script>
@@ -43,7 +53,7 @@ export default {
       padding-left: 16px;
     }
   }
-  > .toggleAside {
+  > .toggleVisible {
     display: none;
     width: 24px;
     height: 24px;
@@ -61,7 +71,7 @@ export default {
     > .menu {
       display: none;
     }
-    > .toggleAside {
+    > .toggleVisible {
       display: inline-block;
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <TopNav :toggleVisible="true" />
   <div class="content">
-    <aside>
+    <aside v-if="asideVisible">
       <h2>组件列表</h2>
       <ol>
         <li><router-link to="/doc/switch">Switch 组件</router-link></li>
@@ -10,15 +10,22 @@
         <li><router-link to="/doc/dialog">Dialog 组件</router-link></li>
       </ol>
     </aside>
-    <main>主内容</main>
+    <main>
+     <router-view/>
+    </main>
   </div>
 </template>
 
-<script lant="ts">
+<script lang="ts">
+import { inject, Ref } from "vue";
 import TopNav from "../components/TopNav.vue";
 
 export default {
   components: { TopNav },
+  setup() {
+    const asideVisible = inject<Ref<boolean>>("asideVisible");
+    return { asideVisible: asideVisible };
+  },
 };
 </script>
 
@@ -46,7 +53,7 @@ export default {
   }
   > main {
     flex-grow: 1;
-    padding: 16px;
+    padding: 70px;
     background: grey;
     height: 100vh;
   }
