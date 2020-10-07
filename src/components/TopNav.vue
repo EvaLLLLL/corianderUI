@@ -47,6 +47,7 @@ export default {};
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10;
   }
   @media (max-width: 500px) {
     > .logo {
