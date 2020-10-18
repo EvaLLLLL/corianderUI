@@ -35,16 +35,16 @@
 			const container = ref<HTMLDivElement>(null);
 			const indicator = ref<HTMLDivElement>(null);
 			
-			const x = () => {
-				const {width} = selectedItem.value.getBoundingClientRect();
-				const {left: left1} = container.value.getBoundingClientRect();
-				const {left: left2} = selectedItem.value.getBoundingClientRect();
-				const left = left2 - left1;
-				indicator.value.style.width = width + 'px';
-				indicator.value.style.left = left + 'px';
-			};
-			onMounted(x);
-			onUpdated(x);
+			onMounted(() => {
+				watchEffect(() => {
+					const {width} = selectedItem.value.getBoundingClientRect();
+					indicator.value.style.width = width + 'px';
+					const {left: left1} = container.value.getBoundingClientRect();
+					const {left: left2} = selectedItem.value.getBoundingClientRect();
+					const left = left2 - left1;
+					indicator.value.style.left = left + 'px';
+				});
+			});
 			
 			const defaults = context.slots.default();
 			const titles = defaults.map(tag => {
