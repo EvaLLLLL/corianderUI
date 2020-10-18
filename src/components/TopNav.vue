@@ -5,7 +5,7 @@
 		</a>
 		<ol class="menu">
 			<li>
-				<router-link to="/doc">开始</router-link>
+				<router-link to="/doc">文档</router-link>
 			</li>
 			<li>
 				<router-link to="/doc/switch">组件列表</router-link>
