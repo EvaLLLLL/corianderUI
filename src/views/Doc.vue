@@ -75,8 +75,8 @@
 		> aside {
 			flex-shrink: 0;
 			width: 150px;
-			background: pink;
 			padding: 80px 16px 16px;
+			background: white;
 			position: fixed;
 			left: 0;
 			top: 0;
@@ -93,7 +93,6 @@
 		> main {
 			flex-grow: 1;
 			padding: 32px;
-			background: grey;
 			height: 100vh;
 		}
 	}

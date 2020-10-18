@@ -42,6 +42,9 @@
 <style lang="scss">
 	$color: #657c50;
 	.topnav {
+		@media (max-width: 500px) {
+			box-shadow: 0 1px 0 fade-out(black, 0.95);;
+		}
 		color: $color;
 		z-index: 10;
 		background: white;
