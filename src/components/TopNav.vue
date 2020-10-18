@@ -1,7 +1,7 @@
 <template>
 	<div class="topnav">
 		<a class="logo" href="/">
-			<span>香菜UI</span>
+			<h2>香菜UI</h2>
 		</a>
 		<ol class="menu">
 			<li>
@@ -15,19 +15,26 @@
 				<a href="/">和我交流</a>
 			</li>
 		</ol>
-		<svg class="icon-menu">
+		<svg class="icon-menu" @click="toggleMenu">
 			<use xlink:href="#icon-menu"></use>
 		</svg>
 	</div>
 </template>
 
 <script lang="ts">
+	import {inject, Ref} from 'vue';
+	
 	export default {
 		name: 'TopNav',
 		props: {
 			toggleVisible: Boolean,
 		},
 		setup() {
+			const menuVisible = inject<Ref<boolean>>('menuVisible');
+			const toggleMenu = () => {
+				menuVisible.value = !menuVisible.value;
+			};
+			return {toggleMenu};
 		},
 	};
 </script>
@@ -48,7 +55,6 @@
 		top: 0;
 		> .logo {
 			max-width: 6em;
-			font-size: 1.2em;
 			margin-right: auto;
 		}
 		> .menu {
