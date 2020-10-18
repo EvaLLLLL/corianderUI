@@ -19,7 +19,7 @@ import DialogDemo from './components/DialogDemo.vue';
 import TabsDemo from './components/TabsDemo.vue';
 
 const history = createWebHashHistory();
-const router = createRouter({
+export const router = createRouter({
 	history: history,
 	routes: [
 		{path: '/', component: Home},
