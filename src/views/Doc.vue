@@ -74,6 +74,7 @@
 		display: flex;
 		flex-direction: row;
 		> aside {
+			color: #555;
 			box-shadow: 1px 0 0 fade-out(black, 0.95);
 			flex-shrink: 0;
 			width: 150px;
