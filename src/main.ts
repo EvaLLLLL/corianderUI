@@ -3,6 +3,7 @@ import {createApp} from 'vue';
 import App from './App.vue';
 import './index.scss';
 import {createWebHashHistory, createRouter} from 'vue-router';
+import 'github-markdown-css';
 // @ts-ignore
 import Home from './views/Home.vue';
 // @ts-ignore
