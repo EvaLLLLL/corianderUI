@@ -1,23 +1,25 @@
 <template>
 	<template v-if="dialogVisible">
-		<div class="xc-dialog-overlay"
-		     @click="overlayDialogClose"></div>
-		<div class="xc-dialog-wrapper">
-			<div class="xc-dialog">
-				<header>
-					<slot name="dialogTitle"/>
-					<span class="xc-dialog-close"
-					      @click="dialogClose"></span>
-				</header>
-				<main>
-					<slot name="dialogContent"/>
-				</main>
-				<footer>
-					<Button level="main" @click="dialogOk">确认</Button>
-					<Button @click="dialogCancel">取消</Button>
-				</footer>
+		<Teleport to="body">
+			<div class="xc-dialog-overlay"
+			     @click="overlayDialogClose"></div>
+			<div class="xc-dialog-wrapper">
+				<div class="xc-dialog">
+					<header>
+						<slot name="dialogTitle"/>
+						<span class="xc-dialog-close"
+						      @click="dialogClose"></span>
+					</header>
+					<main>
+						<slot name="dialogContent"/>
+					</main>
+					<footer>
+						<Button level="main" @click="dialogOk">确认</Button>
+						<Button @click="dialogCancel">取消</Button>
+					</footer>
+				</div>
 			</div>
-		</div>
+		</Teleport>
 	</template>
 </template>
 

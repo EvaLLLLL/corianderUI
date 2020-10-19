@@ -6,15 +6,15 @@
 	        :dialogOk="dialogOkFn"
 	        closeOnclickOverlay>
 		<template v-slot:dialogTitle>
-			<strong>标题</strong>
+			<strong>自定义标题</strong>
 		</template>
 		<template v-slot:dialogContent>
-			<strong>第一行内容</strong>
+			<strong>自定义内容</strong>
 			<div>第二行内容</div>
 			<i>第三行内容</i>
 		</template>
 	</Dialog>
-	<Button level="main" @click="toggleDialogVisible">toggleDialogVisible</Button>
+	<Button level="main" @click="toggleDialogVisible">打开Dialog</Button>
 </template>
 
 <script lang="ts">
@@ -32,7 +32,7 @@
 			};
 			
 			const dialogOkFn = () => {
-				return false;
+				return true;
 			};
 			
 			const dialogCancelFn = () => {
