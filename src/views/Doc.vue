@@ -11,9 +11,6 @@
 					<li>
 						<router-link to="/doc/install">安装</router-link>
 					</li>
-					<li>
-						<router-link to="/doc/get-started">快速开始</router-link>
-					</li>
 				</ol>
 				<h2>组件列表</h2>
 				<ol>
@@ -47,15 +44,16 @@
 	
 	export default {
 		components: {TopNav},
-		setup(){
-			const menuVisible = inject<Ref<boolean>>('menuVisible')
-			return {menuVisible: menuVisible}
+		setup() {
+			const menuVisible = inject<Ref<boolean>>('menuVisible');
+			return {menuVisible: menuVisible};
 		}
 	};
 </script>
 
 <style lang="scss">
 	$color: #657c50;
+	
 	.docWrapper {
 		display: flex;
 		flex-direction: column;
@@ -79,7 +77,7 @@
 			box-shadow: 1px 0 0 fade-out(black, 0.95);
 			flex-shrink: 0;
 			width: 150px;
-			padding: 80px 16px 16px;
+			padding: 80px 0;
 			background: white;
 			position: fixed;
 			left: 0;
@@ -88,10 +86,20 @@
 			z-index: 9;
 			> h2 {
 				margin-bottom: 4px;
+				margin-left: 16px;
 			}
 			> ol {
 				> li {
-					padding: 4px 0;
+					padding: 8px 0;
+					> a {
+						display: block;
+						margin-left: 16px;
+						&.router-link-active {
+							font-weight: bold;
+							color: $color;
+							border-right: 2px solid $color;
+						}
+					}
 				}
 			}
 		}

@@ -19,6 +19,10 @@ import DialogDemo from './components/DialogDemo.vue';
 import TabsDemo from './components/TabsDemo.vue';
 // @ts-ignore
 import MenuDemo from './components/MenuDemo.vue';
+// @ts-ignore
+import IntroDemo from './components/IntroDemo.vue';
+// @ts-ignore
+import InstallDemo from './components/InstallDemo.vue';
 
 const history = createWebHashHistory();
 export const router = createRouter({
@@ -29,6 +33,9 @@ export const router = createRouter({
 			path: '/doc',
 			component: Doc,
 			children: [
+				{path: '', redirect: 'doc/intro'},
+				{path: 'intro', component: IntroDemo},
+				{path: 'install', component: InstallDemo},
 				{path: '', component: DocDemo},
 				{path: 'switch', component: SwitchDemo},
 				{path: 'button', component: ButtonDemo},
