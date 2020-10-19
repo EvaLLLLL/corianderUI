@@ -1,27 +1,35 @@
 <template>
-	<div class="xc-dialog-overlay"></div>
-	<div class="xc-dialog-wrapper">
-		<div class="xc-dialog">
-			<header>
-				标题
-				<span class="xc-dialog-close"></span>
-			</header>
-			<main>
-				<p>第一行字</p>
-				<p>第二行字</p>
-			</main>
-			<footer>
-				<Button level="main">确认</Button>
-				<Button>取消</Button>
-			</footer>
+	<template v-if="dialogVisible">
+		<div class="xc-dialog-overlay"></div>
+		<div class="xc-dialog-wrapper">
+			<div class="xc-dialog">
+				<header>
+					标题
+					<span class="xc-dialog-close"></span>
+				</header>
+				<main>
+					<p>第一行字</p>
+					<p>第二行字</p>
+				</main>
+				<footer>
+					<Button level="main">确认</Button>
+					<Button>取消</Button>
+				</footer>
+			</div>
 		</div>
-	</div>
+	</template>
 </template>
 
 <script lang="ts">
 	import Button from './Button.vue';
 	
 	export default {
+		props: {
+			dialogVisible: {
+				type: Boolean,
+				default: false
+			}
+		},
 		components: {Button}
 	};
 </script>
