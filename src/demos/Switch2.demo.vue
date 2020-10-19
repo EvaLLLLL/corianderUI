@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-	<Switch disabled v-model:value="bool"/>
+	<Switch disabled v-model:value="switchOpen"/>
 </template>
 
 <script lang="ts">
@@ -13,8 +13,8 @@
 	export default {
 		components: {Switch},
 		setup(){
-			const bool = ref(false)
-			return {bool}
+			const switchOpen = ref(false)
+			return {switchOpen}
 		}
 	}
 </script>
