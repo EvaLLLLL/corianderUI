@@ -1,25 +1,17 @@
 <template>
 	<div>
-		<h2>Tabs示例</h2>
-		<Tabs v-model:selected="selected">
-			<Tab title="内容A">这里是内容A的内容</Tab>
-			<Tab title="内容B">这里是内容B的内容</Tab>
-			<Tab title="内容C">这里是内容C的内容</Tab>
-			<Tab title="内容D">这里是内容D的内容</Tab>
-		</Tabs>
+		<Demo :component="Tab1Demo"/>
 	</div>
 </template>
 
 <script lang="ts">
-	import {ref} from 'vue';
-	import Tabs from '../lib/Tabs.vue';
-	import Tab from '../lib/Tab.vue';
+	import Demo from './Demo.vue';
+	import Tab1Demo from '../demos/Tab1.demo.vue';
 	
 	export default {
-		components: {Tabs, Tab},
+		components: {Demo},
 		setup() {
-			const selected = ref('内容A');
-			return {selected};
+			return {Tab1Demo};
 		}
 	};
 </script>
