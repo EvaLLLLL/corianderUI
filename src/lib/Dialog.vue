@@ -14,8 +14,8 @@
 					<p>第二行字</p>
 				</main>
 				<footer>
-					<Button level="main">确认</Button>
-					<Button>取消</Button>
+					<Button level="main" @click="dialogOk">确认</Button>
+					<Button @click="dialogCancel">取消</Button>
 				</footer>
 			</div>
 		</div>
@@ -35,6 +35,12 @@
 			closeOnclickOverlay: {
 				type: Boolean,
 				default: false
+			},
+			dialogOk: {
+				type: Function,
+			},
+			dialogCancel: {
+				type: Function
 			}
 		},
 		setup(props, context) {
@@ -48,7 +54,18 @@
 				}
 			};
 			
-			return {dialogClose, overlayDialogClose};
+			const dialogOk = () => {
+				if (props.dialogOk?.() !== false) {
+					dialogClose();
+				}
+			};
+			
+			const dialogCancel = () => {
+				context.emit('dialogCancel');
+				dialogClose();
+			};
+			
+			return {dialogClose, overlayDialogClose, dialogCancel, dialogOk};
 		}
 	};
 </script>

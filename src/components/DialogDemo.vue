@@ -1,8 +1,11 @@
 <template>
 	<div>Dialog 示例</div>
 	<h1>示例1</h1>
-	<Dialog v-model:dialogVisible="dialogVisible"></Dialog>
-	<Button @click="toggleDialogVisible">toggleDialogVisible</Button>
+	<Dialog v-model:dialogVisible="dialogVisible"
+	        :dialogCancel="dialogCancelFn"
+	        :dialogOk="dialogOkFn"
+	        closeOnclickOverlay></Dialog>
+	<Button level="main" @click="toggleDialogVisible">toggleDialogVisible</Button>
 </template>
 
 <script lang="ts">
@@ -14,10 +17,19 @@
 		components: {Dialog, Button},
 		setup() {
 			const dialogVisible = ref(false);
+			
 			const toggleDialogVisible = () => {
 				dialogVisible.value = !dialogVisible.value;
 			};
-			return {dialogVisible, toggleDialogVisible};
+			
+			const dialogOkFn = () => {
+				return false;
+			};
+			
+			const dialogCancelFn = () => {
+			};
+			
+			return {dialogVisible, toggleDialogVisible, dialogOkFn, dialogCancelFn};
 		}
 	};
 </script>
