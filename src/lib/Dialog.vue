@@ -1,11 +1,13 @@
 <template>
 	<template v-if="dialogVisible">
-		<div class="xc-dialog-overlay"></div>
+		<div class="xc-dialog-overlay"
+		     @click="overlayDialogClose"></div>
 		<div class="xc-dialog-wrapper">
 			<div class="xc-dialog">
 				<header>
 					标题
-					<span class="xc-dialog-close"></span>
+					<span class="xc-dialog-close"
+					      @click="dialogClose"></span>
 				</header>
 				<main>
 					<p>第一行字</p>
@@ -24,13 +26,30 @@
 	import Button from './Button.vue';
 	
 	export default {
+		components: {Button},
 		props: {
 			dialogVisible: {
 				type: Boolean,
 				default: false
+			},
+			closeOnclickOverlay: {
+				type: Boolean,
+				default: false
 			}
 		},
-		components: {Button}
+		setup(props, context) {
+			const dialogClose = () => {
+				context.emit('update:dialogVisible', false);
+			};
+			
+			const overlayDialogClose = () => {
+				if (props.closeOnclickOverlay) {
+					dialogClose();
+				}
+			};
+			
+			return {dialogClose, overlayDialogClose};
+		}
 	};
 </script>
 

@@ -4,4 +4,4 @@ dist
 *.local
 .idea
 .vscode
-.idea
+.history
