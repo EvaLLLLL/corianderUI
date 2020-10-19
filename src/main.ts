@@ -48,7 +48,6 @@ export const router = createRouter({
 				{path: 'intro', component: md(intro)},
 				{path: 'install', component: md(install)},
 				{path: 'get-started', component: md(getStarted)},
-				{path: '', component: DocDemo},
 				{path: 'switch', component: SwitchDemo},
 				{path: 'button', component: ButtonDemo},
 				{path: 'dialog', component: DialogDemo},
