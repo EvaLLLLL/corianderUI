@@ -27,6 +27,9 @@
 						<router-link to="/doc/dialog">Dialog 组件</router-link>
 					</li>
 					<li>
+						<router-link to="/doc/menu">Menu 组件</router-link>
+					</li>
+					<li>
 						<router-link to="/doc/tabs">Tabs 组件</router-link>
 					</li>
 				</ol>
@@ -73,6 +76,7 @@
 		display: flex;
 		flex-direction: row;
 		> aside {
+			box-shadow: 1px 0 0 fade-out(black, 0.95);
 			flex-shrink: 0;
 			width: 150px;
 			padding: 80px 16px 16px;
@@ -81,6 +85,7 @@
 			left: 0;
 			top: 0;
 			height: 100%;
+			z-index: 9;
 			> h2 {
 				margin-bottom: 4px;
 			}
