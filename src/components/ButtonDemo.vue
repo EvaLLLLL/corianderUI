@@ -1,38 +1,27 @@
 <template>
 	<div>
-		<div>
-			<h2>按钮样式示例</h2>
-			<Button theme="button">默认按钮</Button>
-			<Button theme="link">链接按钮</Button>
-			<Button theme="text">文字按钮</Button>
-		</div>
-		<div>
-			<h2>按钮大小示例</h2>
-			<Button size="normal">正常尺寸</Button>
-			<Button size="small">小小按钮</Button>
-			<Button size="big">大大按钮</Button>
-		</div>
-		<div>
-			<h2>按钮主题示例</h2>
-			<Button level="normal">正常按钮</Button>
-			<Button level="main">主要按钮</Button>
-			<Button level="danger">危险按钮</Button>
-		</div>
-		<div>
-			<h2>加载中按钮样式</h2>
-			<Button loading>加载中</Button>
-		</div>
-		<div>
-			<h2>不可操作按钮示例</h2>
-			<Button disabled>不可操作</Button>
-		</div>
+		<h2>Button 组件示例</h2>
+		<Demo :component="Button1Demo"/>
+		<Demo :component="Button2Demo"/>
+		<Demo :component="Button3Demo"/>
+		<Demo :component="Button4Demo"/>
+		<Demo :component="Button5Demo"/>
 	</div>
 </template>
 
 <script lang="ts">
 	import Button from '../lib/Button.vue';
+	import Demo from '../components/Demo.vue';
+	import Button1Demo from '../demos/Button1.demo.vue';
+	import Button2Demo from '../demos/Button2.demo.vue';
+	import Button3Demo from '../demos/Button3.demo.vue';
+	import Button4Demo from '../demos/Button4.demo.vue';
+	import Button5Demo from '../demos/Button5.demo.vue';
 	
 	export default {
-		components: {Button}
+		components: {Button, Demo},
+		setup() {
+			return {Button1Demo, Button2Demo, Button3Demo, Button4Demo, Button5Demo};
+		}
 	};
 </script>
