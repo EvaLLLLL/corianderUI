@@ -5,13 +5,12 @@
 		<div class="xc-dialog-wrapper">
 			<div class="xc-dialog">
 				<header>
-					标题
+					<slot name="dialogTitle"/>
 					<span class="xc-dialog-close"
 					      @click="dialogClose"></span>
 				</header>
 				<main>
-					<p>第一行字</p>
-					<p>第二行字</p>
+					<slot name="dialogContent"/>
 				</main>
 				<footer>
 					<Button level="main" @click="dialogOk">确认</Button>

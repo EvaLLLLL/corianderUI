@@ -4,7 +4,16 @@
 	<Dialog v-model:dialogVisible="dialogVisible"
 	        :dialogCancel="dialogCancelFn"
 	        :dialogOk="dialogOkFn"
-	        closeOnclickOverlay></Dialog>
+	        closeOnclickOverlay>
+		<template v-slot:dialogTitle>
+			<strong>标题</strong>
+		</template>
+		<template v-slot:dialogContent>
+			<strong>第一行内容</strong>
+			<div>第二行内容</div>
+			<i>第三行内容</i>
+		</template>
+	</Dialog>
 	<Button level="main" @click="toggleDialogVisible">toggleDialogVisible</Button>
 </template>
 
