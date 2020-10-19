@@ -4,25 +4,25 @@
 		<div class="demo">
 			<h3>常规用法</h3>
 			<div class="demo-component">
-				<component is="Switch1Demo"/>
+				<component :is="Switch1Demo"/>
 			</div>
 			<div class="demo-actions">
-				<Button>查看代码</Button>
+				<Button @click="toggleCodeVisible">查看代码</Button>
 			</div>
-			<div class="demo-code">
-				<pre>{{Switch1Demo.__sourceCode}}</pre>
+			<div class="demo-code" v-if="codeVisible">
+				<pre v-html="Prism.highlight(Switch1Demo.__sourceCode, Prism.languages.html, 'html')" class="language-css"/>
 			</div>
 		</div>
 		<div class="demo">
 			<h3>禁用用法</h3>
 			<div class="demo-component">
-				<component is="Switch2Demo"/>
+				<component :is="Switch2Demo"/>
 			</div>
 			<div class="demo-actions">
-				<Button>查看代码</Button>
+				<Button @click="toggleCodeVisible">查看代码</Button>
 			</div>
-			<div class="demo-code">
-				<pre>{{Switch2Demo.__sourceCode}}</pre>
+			<div class="demo-code" v-if="codeVisible">
+				<pre v-html="Prism.highlight(Switch2Demo.__sourceCode, Prism.languages.html, 'html')" class="language-css"/>
 			</div>
 		</div>
 	</div>
@@ -34,12 +34,20 @@
 	import Switch2Demo from '../demos/Switch2.demo.vue';
 	import Button from '../lib/Button.vue';
 	import {ref} from 'vue';
+	import 'prismjs';
+	import 'prismjs/themes/prism-okaidia.css';
+	
+	const Prism = (window as any).Prism;
 	
 	export default {
 		components: {Switch, Button},
 		setup() {
 			const bool = ref(true);
-			return {bool, Switch1Demo, Switch2Demo};
+			const codeVisible = ref(false);
+			const toggleCodeVisible = () => {
+				codeVisible.value = !codeVisible.value;
+			};
+			return {Prism, bool, Switch1Demo, Switch2Demo, codeVisible, toggleCodeVisible};
 		}
 	};
 </script>
