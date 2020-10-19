@@ -3,11 +3,9 @@
 </demo>
 
 <template>
-		<div>
-			<Button theme="button">默认按钮</Button>
-			<Button theme="link">链接按钮</Button>
-			<Button theme="text">文字按钮</Button>
-		</div>
+	<Button theme="button">默认按钮</Button>
+	<Button theme="link">链接按钮</Button>
+	<Button theme="text">文字按钮</Button>
 </template>
 
 <script lang="ts">

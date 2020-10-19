@@ -1,16 +1,14 @@
 <demo>
-	正常 Tabs 示例
+	常规用法
 </demo>
 
 <template>
-	<div>
-		<Tabs v-model:selected="selected">
-			<Tab title="内容A">这里是内容A的内容</Tab>
-			<Tab title="内容B">这里是内容B的内容</Tab>
-			<Tab title="内容C">这里是内容C的内容</Tab>
-			<Tab title="内容D">这里是内容D的内容</Tab>
-		</Tabs>
-	</div>
+	<Tabs v-model:selected="selected">
+		<Tab title="内容A">这里是内容A的内容</Tab>
+		<Tab title="内容B">这里是内容B的内容</Tab>
+		<Tab title="内容C">这里是内容C的内容</Tab>
+		<Tab title="内容D">这里是内容D的内容</Tab>
+	</Tabs>
 </template>
 
 <script lang="ts">

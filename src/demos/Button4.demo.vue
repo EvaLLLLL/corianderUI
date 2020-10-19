@@ -3,9 +3,7 @@
 </demo>
 
 <template>
-		<div>
-			<Button loading>加载中</Button>
-		</div>
+	<Button loading>加载中</Button>
 </template>
 
 <script lang="ts">

@@ -3,9 +3,9 @@
 </demo>
 
 <template>
-			<Button size="normal">正常尺寸</Button>
-			<Button size="small">小小按钮</Button>
-			<Button size="big">大大按钮</Button>
+	<Button size="normal">正常尺寸</Button>
+	<Button size="small">小小按钮</Button>
+	<Button size="big">大大按钮</Button>
 </template>
 
 <script lang="ts">

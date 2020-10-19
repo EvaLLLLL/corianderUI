@@ -1,24 +1,22 @@
 <demo>
-	正常弹窗示例
+	常规用法
 </demo>
 
 <template>
-	<div>
-		<Dialog v-model:dialogVisible="dialogVisible"
-		        :dialogCancel="dialogCancelFn"
-		        :dialogOk="dialogOkFn"
-		        closeOnclickOverlay>
-			<template v-slot:dialogTitle>
-				<strong>自定义标题</strong>
-			</template>
-			<template v-slot:dialogContent>
-				<strong>自定义内容</strong>
-				<div>第二行内容</div>
-				<i>第三行内容</i>
-			</template>
-		</Dialog>
-		<Button level="main" @click="toggleDialogVisible">打开 Dialog</Button>
-	</div>
+	<Dialog v-model:dialogVisible="dialogVisible"
+	        :dialogCancel="dialogCancelFn"
+	        :dialogOk="dialogOkFn"
+	        closeOnclickOverlay>
+		<template v-slot:dialogTitle>
+			<strong>自定义标题</strong>
+		</template>
+		<template v-slot:dialogContent>
+			<strong>自定义内容</strong>
+			<div>第二行内容</div>
+			<i>第三行内容</i>
+		</template>
+	</Dialog>
+	<Button level="main" @click="toggleDialogVisible">打开 Dialog</Button>
 </template>
 
 <script lang="ts">

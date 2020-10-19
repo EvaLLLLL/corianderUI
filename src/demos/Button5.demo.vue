@@ -3,9 +3,7 @@
 </demo>
 
 <template>
-		<div>
-			<Button disabled>不可操作</Button>
-		</div>
+	<Button disabled>不可操作</Button>
 </template>
 
 <script lang="ts">
