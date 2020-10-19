@@ -1,8 +1,13 @@
 <template>
-	<Tabs v-model:selected="selected">
-		<Tab title="内容A">内容A内容A内容A内容A内容A内容A内容A内容A</Tab>
-		<Tab title="内容B">BBBBBBBBBB</Tab>
-	</Tabs>
+	<div>
+		<h2>Tabs示例</h2>
+		<Tabs v-model:selected="selected">
+			<Tab title="内容A">这里是内容A的内容</Tab>
+			<Tab title="内容B">这里是内容B的内容</Tab>
+			<Tab title="内容C">这里是内容C的内容</Tab>
+			<Tab title="内容D">这里是内容D的内容</Tab>
+		</Tabs>
+	</div>
 </template>
 
 <script lang="ts">
@@ -12,7 +17,7 @@
 	
 	export default {
 		components: {Tabs, Tab},
-		setup(props, context) {
+		setup() {
 			const selected = ref('内容A');
 			return {selected};
 		}
