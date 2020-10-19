@@ -7,9 +7,11 @@
 <script lang="ts">
 	export default {
 		props: {
-			itemkey : {
+			itemkey: {
 				type: String
 			}
+		},
+		setup(props, context) {
 		}
-	}
+	};
 </script>
