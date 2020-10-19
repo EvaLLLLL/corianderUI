@@ -21,9 +21,19 @@ import TabsDemo from './components/TabsDemo.vue';
 // @ts-ignore
 import MenuDemo from './components/MenuDemo.vue';
 // @ts-ignore
-import IntroDemo from './components/IntroDemo.vue';
+import {h} from 'vue';
 // @ts-ignore
-import InstallDemo from './components/InstallDemo.vue';
+import Markdown from './components/Markdown.vue';
+// @ts-ignore
+import intro from './markdown/intro.md';
+// @ts-ignore
+import getStarted from './markdown/getStarted.md';
+// @ts-ignore
+import install from './markdown/install.md';
+
+const md = (string) => {
+	return h(Markdown, {content: string, key: string});
+};
 
 const history = createWebHashHistory();
 export const router = createRouter({
@@ -35,8 +45,9 @@ export const router = createRouter({
 			component: Doc,
 			children: [
 				{path: '', redirect: 'doc/intro'},
-				{path: 'intro', component: IntroDemo},
-				{path: 'install', component: InstallDemo},
+				{path: 'intro', component: md(intro)},
+				{path: 'install', component: md(install)},
+				{path: 'get-started', component: md(getStarted)},
 				{path: '', component: DocDemo},
 				{path: 'switch', component: SwitchDemo},
 				{path: 'button', component: ButtonDemo},
