@@ -5,7 +5,7 @@
 ### 引入
 
 ```
-import {Button, Tabs, Switch, Dialog} from "gulu-ui-demo"
+import {Button, Tabs, Switch, Dialog} from "coriander-ui"
 ```
 
   
