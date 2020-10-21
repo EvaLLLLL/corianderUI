@@ -9,6 +9,3 @@
 [源代码点这里](https://github.com/EvaLLLLL/corianderUI)
 
 [运行方法点这里](#/doc/install)
-
-
-下一节：[安装](#/doc/install)

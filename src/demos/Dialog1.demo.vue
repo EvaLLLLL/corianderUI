@@ -1,5 +1,5 @@
 <demo>
-	常规用法
+	弹窗示例
 </demo>
 
 <template>

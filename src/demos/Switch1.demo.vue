@@ -1,20 +1,20 @@
 <demo>
-	常规用法
+	正常开关示例
 </demo>
 
 <template>
-	<Switch v-model:value="switchOpen"/>
+  <Switch v-model:value="switchOpen" />
 </template>
 
 <script lang="ts">
-	import Switch from '../lib/Switch.vue';
-	import {ref} from 'vue';
-	
-	export default {
-		components: {Switch},
-		setup(){
-			const switchOpen = ref(false)
-			return {switchOpen}
-		}
-	}
+import Switch from "../lib/Switch.vue";
+import { ref } from "vue";
+
+export default {
+  components: { Switch },
+  setup() {
+    const switchOpen = ref(true);
+    return { switchOpen };
+  },
+};
 </script>

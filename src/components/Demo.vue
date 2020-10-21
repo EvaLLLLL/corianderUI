@@ -5,25 +5,22 @@
 			<component :is="component"/>
 		</div>
 		<div class="demo-actions">
-			<Button @click="hideCode" v-if="codeVisible">隐藏示例代码</Button>
-			<Button @click="showCode" v-else>查看示例代码</Button>
+			<Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
+			<Button @click="showCode" v-else>查看代码</Button>
 		</div>
 		<div class="demo-code" v-if="codeVisible">
-			<pre v-html="Prism.highlight(component.__sourceCode, Prism.languages.html, 'html')" class="language-css"/>
+			<CodePre :code="component.__sourceCode"/>
 		</div>
 	</div>
 </template>
 
 <script lang="ts">
 	import {ref} from 'vue';
-	import 'prismjs';
-	import 'prismjs/themes/prism-okaidia.css';
 	import Button from '../lib/Button.vue';
-	
-	const Prism = (window as any).Prism;
+	import CodePre from './CodePre.vue';
 	
 	export default {
-		components: {Button},
+		components: {CodePre, Button},
 		props: {
 			component: Object
 		},
@@ -36,7 +33,7 @@
 				codeVisible.value = true;
 			};
 			
-			return {Prism, codeVisible, hideCode, showCode};
+			return {codeVisible, hideCode, showCode};
 		}
 	};
 </script>
@@ -61,11 +58,6 @@
 		&-code {
 			padding: 8px 16px;
 			border-top: 1px dashed $border-color;
-			> pre {
-				line-height: 1.1;
-				font-family: "Fira Code", monospace, Consolas, "Courier New", Courier;
-				margin: 0;
-			}
 		}
 	}
 </style>

@@ -1,4 +1,4 @@
-import {createApp} from 'vue';
+import {createApp, watch, ref, onMounted} from 'vue';
 // @ts-ignore
 import App from './App.vue';
 import './index.scss';
@@ -16,8 +16,6 @@ import ButtonDemo from './components/ButtonDemo.vue';
 import DialogDemo from './components/DialogDemo.vue';
 // @ts-ignore
 import TabsDemo from './components/TabsDemo.vue';
-// @ts-ignore
-import MenuDemo from './components/MenuDemo.vue';
 // @ts-ignore
 import {h} from 'vue';
 // @ts-ignore
@@ -50,7 +48,6 @@ export const router = createRouter({
 				{path: 'button', component: ButtonDemo},
 				{path: 'dialog', component: DialogDemo},
 				{path: 'tabs', component: TabsDemo},
-				{path: 'menu', component: MenuDemo},
 			],
 		},
 	],
@@ -59,3 +56,11 @@ export const router = createRouter({
 const app = createApp(App);
 app.use(router);
 app.mount('#app');
+
+const x = ref('');
+onMounted(()=>{
+	watch(x, () => {
+		x.value = router.currentRoute.value.path;
+		app.mount('#app');
+	});
+})

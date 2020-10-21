@@ -17,11 +17,11 @@ import {Button, Tabs, Switch, Dialog} from "gulu-ui-demo"
     <Button>按钮</Button>
   </div>
 </template>
+
 <script>
-import {Button, Tabs, Switch, Dialog} from "king-ui"
+import {Button, Tabs, Switch, Dialog} from "coriander-ui"
 export default {
   components: {Button}
 }
 </script>
 ```
-

@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-	import {ref, watchEffect, onMounted, onUpdated, computed} from 'vue';
+	import {ref, watchEffect, onMounted} from 'vue';
 	
 	export default {
 		props: {
@@ -71,6 +71,7 @@
 				padding: 8px 0;
 				margin: 0 16px;
 				cursor: pointer;
+				white-space: nowrap;
 				&:first-child {
 					margin-left: 0;
 				}

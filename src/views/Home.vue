@@ -1,6 +1,6 @@
 <template>
+	<TopNav/>
 	<div class="homeWrapper">
-		<TopNav/>
 		<div class="banner">
 			<div class="left">
 				<svg>
@@ -11,8 +11,8 @@
 				<h1>香菜UI</h1>
 				<h2>一个简单好用的UI框架</h2>
 				<p class="actions">
-					<a href="https://github.com/EvaLLLLL/corianderUI">GitHub</a>
 					<router-link to="/doc">开始</router-link>
+					<a href="https://github.com/EvaLLLLL/corianderUI">GitHub</a>
 				</p>
 			</div>
 		</div>
@@ -22,24 +22,27 @@
 					<svg>
 						<use xlink:href="#icon-vue"></use>
 					</svg>
-					<h2>基于 Vue3</h2>
-					<p>使用了 Vue 3 Composition API！</p>
+					<h2>基于Vue3开发</h2>
+					<p>使用了Vue3CompositionAPI</p>
 				</li>
 				<li>
 					<svg>
 						<use xlink:href="#icon-ts"></use>
 					</svg>
-					<h2>基于 TypeScript</h2>
-					<p>源代码采用 TypeScript 书写（非严格检查）</p>
+					<h2>基于TypeScript开发</h2>
+					<p>源代码采用TypeScript进行书写</p>
 				</li>
 				<li>
 					<svg>
 						<use xlink:href="#icon-light"></use>
 					</svg>
-					<h2>代码易读</h2>
+					<h2>简洁易懂</h2>
 					<p>组件源代码简洁，使用简便</p>
 				</li>
 			</ul>
+		</div>
+		<div class="footer">
+			MIT Licensed | Copyright © 2020-present EvaL
 		</div>
 	</div>
 
@@ -56,6 +59,7 @@
 <style lang="scss">
 	$color: #657c50;
 	.homeWrapper {
+		position: relative;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -63,6 +67,7 @@
 		justify-content: center;
 		white-space: nowrap;
 		> .banner {
+			box-shadow: 0 1px 0 fade-out(black, 0.95);
 			display: flex;
 			padding: 100px;
 			justify-content: center;
@@ -107,6 +112,10 @@
 			}
 		}
 		> .features {
+			padding: 90px 0;
+			@media(max-width: 500px) {
+				padding: 0;
+			}
 			width: 100%;
 			display: flex;
 			justify-content: center;
@@ -129,6 +138,12 @@
 					}
 				}
 			}
+		}
+		> .footer {
+			padding: 1.5rem;
+			text-align: center;
+			color: #999;
+			border-top: 1px solid #f4f4f4;
 		}
 	}
 

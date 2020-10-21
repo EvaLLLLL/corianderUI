@@ -11,5 +11,3 @@ npm install coriander-ui
 ```
 yarn add coriander-ui
 ```
-
-下一节：[开始使用](#/doc/get-started)

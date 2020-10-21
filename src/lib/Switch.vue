@@ -20,7 +20,9 @@
 		},
 		setup(props, context) {
 			const toggle = () => {
-				context.emit('update:value', !props.value);
+				if (!props.disabled) {
+					context.emit('update:value', !props.value);
+				}
 			};
 			return {toggle};
 		}
@@ -55,21 +57,10 @@
 		&:focus {
 			outline: none;
 		}
-		&:active {
-			> span {
-				width: $h2 + 4px;
-			}
-		}
 		&.xc-switch-checked {
 			background: lighten($green, 25%);
 			> span {
 				left: calc(100% - #{$h2} - 2px);
-			}
-			&:active {
-				> span {
-					width: $h2 + 4px;
-					margin-left: -4px;
-				}
 			}
 		}
 		&.xc-switch-disabled {

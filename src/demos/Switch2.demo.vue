@@ -1,5 +1,5 @@
 <demo>
-	不可用用法
+	不可操作开关示例
 </demo>
 
 <template>

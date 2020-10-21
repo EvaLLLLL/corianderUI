@@ -16,3 +16,10 @@
 		}
 	};
 </script>
+
+<style lang="scss" scoped>
+	$green: #657c50;
+	h2 {
+		color: $green;
+	}
+</style>

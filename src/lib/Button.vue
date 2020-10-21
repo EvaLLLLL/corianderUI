@@ -103,8 +103,8 @@
 				padding: 0 4px;
 			}
 			&.xc-size-big {
-				font-size: 24px;
-				height: 48px;
+				font-size: 18px;
+				height: 36px;
 				padding: 0 16px;
 			}
 		}
