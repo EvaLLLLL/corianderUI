@@ -20,8 +20,8 @@
 </template>
 
 <script lang="ts">
-	import Dialog from '../lib/Dialog.vue';
-	import Button from '../lib/Button.vue';
+	import Dialog from '../lib/index.ts';
+	import Button from '../lib/index.ts';
 	import {ref} from 'vue';
 	
 	export default {

@@ -1,13 +1,13 @@
 <template>
 	<div class="topnav">
-		<a class="logo" href="/">
+		<a class="logo" href="#/">
 			<svg>
 				<use xlink:href="#icon-xiangcai"></use>
 			</svg>
 		</a>
 		<ol class="menu">
 			<li>
-				<a href="/">主页</a>
+				<a href="#/">主页</a>
 			</li>
 			<li>
 				<router-link :to="docPath">文档</router-link>
