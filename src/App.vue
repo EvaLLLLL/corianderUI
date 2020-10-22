@@ -20,9 +20,6 @@
 				}
 				document.scrollingElement.scrollTop = 0;
 			});
-			router.beforeEach(()=>{
-			
-			})
 		},
 	};
 </script>
