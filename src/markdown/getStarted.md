@@ -1,11 +1,11 @@
-## 开始使用
-请先[安装](#/doc/install)本组件库。
-
+## 快速上手
 
 ### 引入
 
 ```
-import {Button, Tabs, Switch, Dialog} from "coriander-ui"
+import {Button, Tabs, Switch, Dialog} from "coriander-ui";
+
+import 'coriander-ui/dist/lib/coriander.esm.css'
 ```
 
   
@@ -20,6 +20,8 @@ import {Button, Tabs, Switch, Dialog} from "coriander-ui"
 
 <script>
 import {Button, Tabs, Switch, Dialog} from "coriander-ui"
+import 'coriander-ui/dist/lib/coriander.esm.css'
+
 export default {
   components: {Button}
 }

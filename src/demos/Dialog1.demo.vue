@@ -16,7 +16,7 @@
 			<i>第三行内容</i>
 		</template>
 	</Dialog>
-	<Button level="main" @click="toggleDialogVisible">打开 Dialog</Button>
+	<Button level="main" @click="toggleDialogVisible">点我查看 Dialog</Button>
 </template>
 
 <script lang="ts">

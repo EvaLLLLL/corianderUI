@@ -12,7 +12,7 @@
 						<router-link to="/doc/install">安装</router-link>
 					</li>
 					<li>
-						<router-link to="/doc/get-started">开始使用</router-link>
+						<router-link to="/doc/get-started">快速上手</router-link>
 					</li>
 				</ol>
 				<h2>组件列表</h2>
@@ -145,16 +145,25 @@
 			position: relative;
 			> article {
 				color: #555;
-				> h2 {
-					color: $color;
-				}
-				> p {
+				> p  {
 					> a {
+						color: $color;
+						display: inline-block;
+						&:hover {
+							text-decoration: none;
+							cursor: pointer;
+							transform: scale(1.2);
+							transition: all 250ms;
+						}
+					}
+					> strong {
 						color: $color;
 					}
 				}
 				> pre {
 					font-size: 14px;
+					background: #272822;
+					color: white;
 					@media (max-width: 500px) {
 						font-size: 12px;
 					}
