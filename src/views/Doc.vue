@@ -55,12 +55,12 @@
 				watchEffect(() => {
 					const fileNameMap = {
 						'/doc/intro': '安装',
-						'/doc/install': '开始使用',
+						'/doc/install': '快速上手',
 						'/doc/get-started': 'Button 组件',
 						'/doc/button': 'Switch 组件',
 						'/doc/switch': 'Dialog 组件',
 						'/doc/dialog': 'Tabs 组件',
-						'/doc/tabs': '开始使用',
+						'/doc/tabs': '快速上手',
 					};
 					const pathMap = {
 						'/doc/intro': '/doc/install',

@@ -16,8 +16,11 @@
 </script>
 
 <style lang="scss" scoped>
-	$green: #657c50;
 	h2 {
-		color: $green;
+		line-height: 1.25;
+		font-weight: 600;
+		font-size: 1.5em;
+		padding-bottom: 0.3em;
+		border-bottom: 1px solid rgb(234, 236, 239);
 	}
 </style>
