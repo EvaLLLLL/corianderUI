@@ -22,10 +22,14 @@
 	export default {
 		components: {CodePre, Button},
 		props: {
-			component: Object
+			component: Object,
+			codeOpen: {
+				type: Boolean,
+				default: false
+			}
 		},
-		setup() {
-			const codeVisible = ref(false);
+		setup(props) {
+			const codeVisible = ref(props.codeOpen);
 			const hideCode = () => {
 				codeVisible.value = false;
 			};

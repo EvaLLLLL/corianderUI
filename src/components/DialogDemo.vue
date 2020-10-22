@@ -1,6 +1,6 @@
 <template>
 	<h2>Dialog 组件示例</h2>
-	<Demo :component="Dialog1Demo"/>
+	<Demo :component="Dialog1Demo" codeOpen/>
 </template>
 
 <script lang="ts">
