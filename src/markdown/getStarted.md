@@ -11,7 +11,7 @@ import 'coriander-ui/dist/lib/coriander.esm.css'
   
 ### Vue 单文件组件代码示例
 
-```
+```html
 <template>
   <div>
     <Button>按钮</Button>
