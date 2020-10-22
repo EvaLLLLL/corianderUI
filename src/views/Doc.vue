@@ -12,7 +12,7 @@
 						<router-link to="/doc/install">安装</router-link>
 					</li>
 					<li>
-						<router-link to="/doc/get-started">快速上手</router-link>
+						<router-link to="/doc/start">快速上手</router-link>
 					</li>
 				</ol>
 				<h2>组件列表</h2>
@@ -56,7 +56,7 @@
 					const fileNameMap = {
 						'/doc/intro': '安装',
 						'/doc/install': '快速上手',
-						'/doc/get-started': 'Button 组件',
+						'/doc/start': 'Button 组件',
 						'/doc/button': 'Switch 组件',
 						'/doc/switch': 'Dialog 组件',
 						'/doc/dialog': 'Tabs 组件',
@@ -64,12 +64,12 @@
 					};
 					const pathMap = {
 						'/doc/intro': '/doc/install',
-						'/doc/install': '/doc/get-started',
-						'/doc/get-started': '/doc/button',
+						'/doc/install': '/doc/start',
+						'/doc/start': '/doc/button',
 						'/doc/button': '/doc/switch',
 						'/doc/switch': '/doc/dialog',
 						'/doc/dialog': '/doc/Tabs',
-						'/doc/tabs': '/doc/get-started',
+						'/doc/tabs': '/doc/start',
 					};
 					const currentPath = router.currentRoute.value.matched[1].path;
 					nextName.value = fileNameMap[currentPath];
