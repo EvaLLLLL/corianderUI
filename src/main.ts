@@ -23,8 +23,6 @@ import Markdown from './components/Markdown.vue';
 // @ts-ignore
 import intro from './markdown/intro.md';
 // @ts-ignore
-import getStarted from './markdown/getStarted.md';
-// @ts-ignore
 import install from './markdown/install.md';
 // @ts-ignore
 import GetStartDemo from './components/GetStart.vue';
@@ -45,7 +43,6 @@ export const router = createRouter({
 				{path: '', redirect: 'doc/intro'},
 				{path: 'intro', component: md(intro)},
 				{path: 'install', component: md(install)},
-				{path: 'get-started', component: md(getStarted)},
 				{path: 'switch', component: SwitchDemo},
 				{path: 'button', component: ButtonDemo},
 				{path: 'dialog', component: DialogDemo},
