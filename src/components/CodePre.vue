@@ -23,9 +23,9 @@ export default {
 
 <style lang="scss" scoped>
 pre {
-  line-height: 1.5;
-  font-size: 14px;
-  font-family: "Fira Code", monospace, Consolas, "Courier New", Courier;
+  line-height: 1.4;
+  font-size: 13px;
+  font-family: "JetBrains Mono", monospace, Consolas, "Courier New", Courier;
   margin: 0;
   white-space: pre-wrap;
   @media (max-width: 500px) {
