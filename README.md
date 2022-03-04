@@ -4,13 +4,14 @@
 
 ### 介绍
 
-香菜UI是一款基于 **Vue3** 和 **TypeScript** 开发的 **UI组件库**。
+香菜 UI 是一款基于 **Vue3** 和 **TypeScript** 开发的 **UI 组件库**。
 
 这款组件库其实是我为了学习 Vue3 和 TypeScript 而写的。
 
 不建议您使用本库来进行生产，但是可以用来学习交流。
 
 目前已有组件有（未来会添加更多组件）：
+
 - Button 组件：[详细介绍](https://evalllll.github.io/corianderUI-website/index.html#/doc/button)
 - Switch 组件：[详细介绍](https://evalllll.github.io/corianderUI-website/index.html#/doc/switch)
 - Dialog 组件：[详细介绍](https://evalllll.github.io/corianderUI-website/index.html#/doc/dialog)
@@ -37,16 +38,16 @@ npm install coriander-ui@0.0.6
 ```html
 <template>
   <div>
-    <Button>按钮</Button>
+    <button>按钮</button>
   </div>
 </template>
 
 <script>
-import {Button, Tabs, Switch, Dialog} from "coriander-ui"
-import 'coriander-ui/dist/lib/coriander.esm.css'
+  import { Button, Tabs, Switch, Dialog } from "coriander-ui";
+  import "coriander-ui/dist/lib/coriander.esm.css";
 
-export default {
-  components: {Button}
-}
+  export default {
+    components: { Button },
+  };
 </script>
 ```

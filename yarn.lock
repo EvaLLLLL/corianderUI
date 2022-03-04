@@ -1718,6 +1718,11 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.28, postcss@^7.0.3
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
+prettier@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.npmmirror.com/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
+  integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
+
 prismjs@^1.21.0:
   version "1.22.0"
   resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.22.0.tgz#73c3400afc58a823dd7eed023f8e1ce9fd8977fa"
