@@ -3,13 +3,13 @@
 </demo>
 
 <template>
-	<Button disabled>不可操作</Button>
+  <Button disabled>不可操作</Button>
 </template>
 
 <script lang="ts">
-	import {Button} from '../lib/index.ts';
-	
-	export default {
-		components: {Button}
-	};
+import { Button } from "../lib/index.ts";
+
+export default {
+  components: { Button },
+};
 </script>

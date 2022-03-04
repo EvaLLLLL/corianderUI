@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { ref } from "vue";
-import {Tabs, Tab} from "../lib/index.ts";
+import { Tabs, Tab } from "../lib/index.ts";
 
 export default {
   components: { Tabs, Tab },
