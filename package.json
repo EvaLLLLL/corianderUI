@@ -10,9 +10,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy:github": "sh deploy_github.sh",
-    "deploy:gitee": "sh deploy_gitee.sh",
-    "deploy": "sh deploy_gitee.sh;sh deploy_github.sh"
+    "deploy:github": "sh scripts/deploy_github.sh",
+    "deploy:gitee": "sh scripts/deploy_gitee.sh",
+    "deploy": "sh scripts/deploy_gitee.sh;sh deploy_github.sh"
   },
   "resolutions": {
     "node-sass": "npm:sass@^1.26.11"
