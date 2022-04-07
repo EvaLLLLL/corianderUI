@@ -6,7 +6,7 @@
     "dist/lib/*"
   ],
   "main": "dist/lib/coriander.js",
-  "module": "dist/lib/gulu.esm.js",
+  "module": "dist/lib/coriander.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
